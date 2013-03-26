@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #include "minizip/unzip.h"
 
+#define kSSZipArchiveFilenameSuffixForCompressedFile @"zip"
+
 @protocol SSZipArchiveDelegate;
 
 @interface SSZipArchive : NSObject
