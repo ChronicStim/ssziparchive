@@ -366,7 +366,8 @@
 // supports writing files with logical folder/directory structure
 // *path* is the absolute path of the file that will be compressed
 // *fileName* is the relative name of the file how it is stored within the zip e.g. /folder/subfolder/text1.txt
-- (BOOL)writeFileAtPath:(NSString *)path withFileName:(NSString *)fileName {
+- (BOOL)writeFileAtPath:(NSString *)path withFileName:(NSString *)fileName;
+{
     NSAssert((_zip != NULL), @"Attempting to write to an archive which was never opened");
     
 	FILE *input = fopen([path UTF8String], "r");
