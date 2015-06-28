@@ -32,11 +32,21 @@
 		21CC41FC17DB7D3500201DDC /* TestPasswordArchive.zip in Resources */ = {isa = PBXBuildFile; fileRef = 21CC41F417DB7D3500201DDC /* TestPasswordArchive.zip */; };
 		21CC41FD17DB7D3500201DDC /* Unicode.zip in Resources */ = {isa = PBXBuildFile; fileRef = 21CC41F517DB7D3500201DDC /* Unicode.zip */; };
 		21CC41FF17DB7D3500201DDC /* SSZipArchiveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC41F717DB7D3500201DDC /* SSZipArchiveTests.m */; };
-		21CC420F17DB7D6F00201DDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CC420817DB7D6300201DDC /* Images.xcassets */; };
 		21CC421017DB7D7400201DDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC420517DB7D6300201DDC /* main.m */; };
 		21CC421117DB7D7900201DDC /* SSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CC420317DB7D6300201DDC /* SSAppDelegate.m */; };
 		21CC421317DB7E0500201DDC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CC421217DB7E0500201DDC /* libz.dylib */; };
 		21CC421417DB7E0900201DDC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 21CC421217DB7E0500201DDC /* libz.dylib */; };
+		3D18E4BC1B2367A300627171 /* CollectingDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D18E4BB1B2367A300627171 /* CollectingDelegate.m */; };
+		3D18E4C51B236A7500627171 /* 0.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4BD1B236A7500627171 /* 0.m4a */; };
+		3D18E4C61B236A7500627171 /* 1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4BE1B236A7500627171 /* 1.m4a */; };
+		3D18E4C71B236A7500627171 /* 2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4BF1B236A7500627171 /* 2.m4a */; };
+		3D18E4C81B236A7500627171 /* 3.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4C01B236A7500627171 /* 3.m4a */; };
+		3D18E4C91B236A7500627171 /* 4.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4C11B236A7500627171 /* 4.m4a */; };
+		3D18E4CA1B236A7500627171 /* 5.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4C21B236A7500627171 /* 5.m4a */; };
+		3D18E4CB1B236A7500627171 /* 6.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4C31B236A7500627171 /* 6.m4a */; };
+		3D18E4CC1B236A7500627171 /* 7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4C41B236A7500627171 /* 7.m4a */; };
+		3D18E4CE1B236C2A00627171 /* hello.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3D18E4CD1B236C2A00627171 /* hello.zip */; };
+		A5CD0D3A1AD3490700E7F209 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CD0D391AD3490700E7F209 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,9 +90,20 @@
 		21CC420317DB7D6300201DDC /* SSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSAppDelegate.m; sourceTree = "<group>"; };
 		21CC420517DB7D6300201DDC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21CC420617DB7D6300201DDC /* SSZipArchive-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-Prefix.pch"; sourceTree = "<group>"; };
-		21CC420817DB7D6300201DDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		21CC420917DB7D6300201DDC /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
 		21CC421217DB7E0500201DDC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3D18E4BA1B2367A300627171 /* CollectingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectingDelegate.h; sourceTree = "<group>"; };
+		3D18E4BB1B2367A300627171 /* CollectingDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectingDelegate.m; sourceTree = "<group>"; };
+		3D18E4BD1B236A7500627171 /* 0.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 0.m4a; path = Tests/Multi_Zip_Test/0.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4BE1B236A7500627171 /* 1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.m4a; path = Tests/Multi_Zip_Test/1.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4BF1B236A7500627171 /* 2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 2.m4a; path = Tests/Multi_Zip_Test/2.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4C01B236A7500627171 /* 3.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 3.m4a; path = Tests/Multi_Zip_Test/3.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4C11B236A7500627171 /* 4.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 4.m4a; path = Tests/Multi_Zip_Test/4.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4C21B236A7500627171 /* 5.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 5.m4a; path = Tests/Multi_Zip_Test/5.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4C31B236A7500627171 /* 6.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 6.m4a; path = Tests/Multi_Zip_Test/6.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4C41B236A7500627171 /* 7.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = 7.m4a; path = Tests/Multi_Zip_Test/7.m4a; sourceTree = SOURCE_ROOT; };
+		3D18E4CD1B236C2A00627171 /* hello.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = hello.zip; sourceTree = "<group>"; };
+		A5CD0D391AD3490700E7F209 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				21CC41D717DB7D2F00201DDC /* SSZipArchive */,
-				21CC420017DB7D6300201DDC /* Example */,
 				21CC41EE17DB7D3500201DDC /* Tests */,
+				21CC420017DB7D6300201DDC /* Sample Application */,
 				21CC41A717DB7D1300201DDC /* Frameworks */,
 				21CC41A617DB7D1300201DDC /* Products */,
 			);
@@ -172,6 +193,9 @@
 		21CC41EE17DB7D3500201DDC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				3D18E4BA1B2367A300627171 /* CollectingDelegate.h */,
+				3D18E4BB1B2367A300627171 /* CollectingDelegate.m */,
+				3D18E4A91B23679000627171 /* Multi_Zip_Test */,
 				21CC41EF17DB7D3500201DDC /* Fixtures */,
 				21CC41F617DB7D3500201DDC /* SSZipArchiveTests-Info.plist */,
 				21CC41F717DB7D3500201DDC /* SSZipArchiveTests.m */,
@@ -182,6 +206,7 @@
 		21CC41EF17DB7D3500201DDC /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				3D18E4CD1B236C2A00627171 /* hello.zip */,
 				011F4B95182D71B700DE704F /* RelativeSymbolicLink.zip */,
 				21CC41F017DB7D3500201DDC /* IncorrectHeaders.zip */,
 				21CC41F117DB7D3500201DDC /* PermissionsTestApp.app */,
@@ -193,41 +218,41 @@
 			path = Fixtures;
 			sourceTree = "<group>";
 		};
-		21CC420017DB7D6300201DDC /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				21CC420117DB7D6300201DDC /* Classes */,
-				21CC420417DB7D6300201DDC /* Other Sources */,
-				21CC420717DB7D6300201DDC /* Resources */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		21CC420117DB7D6300201DDC /* Classes */ = {
+		21CC420017DB7D6300201DDC /* Sample Application */ = {
 			isa = PBXGroup;
 			children = (
 				21CC420217DB7D6300201DDC /* SSAppDelegate.h */,
 				21CC420317DB7D6300201DDC /* SSAppDelegate.m */,
+				21CC420417DB7D6300201DDC /* Supporting Files */,
 			);
-			path = Classes;
+			path = "Sample Application";
 			sourceTree = "<group>";
 		};
-		21CC420417DB7D6300201DDC /* Other Sources */ = {
+		21CC420417DB7D6300201DDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A5CD0D391AD3490700E7F209 /* Default-568h@2x.png */,
 				21CC420517DB7D6300201DDC /* main.m */,
 				21CC420617DB7D6300201DDC /* SSZipArchive-Prefix.pch */,
-			);
-			path = "Other Sources";
-			sourceTree = "<group>";
-		};
-		21CC420717DB7D6300201DDC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				21CC420817DB7D6300201DDC /* Images.xcassets */,
 				21CC420917DB7D6300201DDC /* SSZipArchive-Info.plist */,
 			);
-			path = Resources;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D18E4A91B23679000627171 /* Multi_Zip_Test */ = {
+			isa = PBXGroup;
+			children = (
+				3D18E4BD1B236A7500627171 /* 0.m4a */,
+				3D18E4BE1B236A7500627171 /* 1.m4a */,
+				3D18E4BF1B236A7500627171 /* 2.m4a */,
+				3D18E4C01B236A7500627171 /* 3.m4a */,
+				3D18E4C11B236A7500627171 /* 4.m4a */,
+				3D18E4C21B236A7500627171 /* 5.m4a */,
+				3D18E4C31B236A7500627171 /* 6.m4a */,
+				3D18E4C41B236A7500627171 /* 7.m4a */,
+			);
+			name = Multi_Zip_Test;
+			path = ../../../Pictures/ssziparchive/Tests/Multi_Zip_Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,8 +331,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21CC420F17DB7D6F00201DDC /* Images.xcassets in Resources */,
+				3D18E4C51B236A7500627171 /* 0.m4a in Resources */,
+				3D18E4CB1B236A7500627171 /* 6.m4a in Resources */,
+				3D18E4CC1B236A7500627171 /* 7.m4a in Resources */,
+				3D18E4C91B236A7500627171 /* 4.m4a in Resources */,
+				3D18E4C61B236A7500627171 /* 1.m4a in Resources */,
+				3D18E4CA1B236A7500627171 /* 5.m4a in Resources */,
 				011F4B96182D71B700DE704F /* RelativeSymbolicLink.zip in Resources */,
+				3D18E4CE1B236C2A00627171 /* hello.zip in Resources */,
+				A5CD0D3A1AD3490700E7F209 /* Default-568h@2x.png in Resources */,
+				3D18E4C81B236A7500627171 /* 3.m4a in Resources */,
+				3D18E4C71B236A7500627171 /* 2.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +372,7 @@
 				210D525417DEFB880060D41A /* ioapi.c in Sources */,
 				210D525A17DEFB880060D41A /* zip.c in Sources */,
 				21CC421017DB7D7400201DDC /* main.m in Sources */,
+				3D18E4BC1B2367A300627171 /* CollectingDelegate.m in Sources */,
 				210D525617DEFB880060D41A /* mztools.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,11 +474,10 @@
 		21CC41D217DB7D1300201DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Other Sources/SSZipArchive-Prefix.pch";
-				INFOPLIST_FILE = "Example/Resources/SSZipArchive-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sample Application/Supporting Files/SSZipArchive-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Sample Application/Supporting Files/SSZipArchive-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -452,11 +486,10 @@
 		21CC41D317DB7D1300201DDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Example/Other Sources/SSZipArchive-Prefix.pch";
-				INFOPLIST_FILE = "Example/Resources/SSZipArchive-Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sample Application/Supporting Files/SSZipArchive-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Sample Application/Supporting Files/SSZipArchive-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -466,6 +499,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSZipArchive.app/SSZipArchive";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -486,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SSZipArchive.app/SSZipArchive";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
