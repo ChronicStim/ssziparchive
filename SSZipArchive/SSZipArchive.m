@@ -26,6 +26,18 @@
     zipFile _zip;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wobjc-designated-initializers"
+-(instancetype)init;
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+#pragma clang diagnostic pop
+
 #pragma mark - Unzipping
 
 + (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination
