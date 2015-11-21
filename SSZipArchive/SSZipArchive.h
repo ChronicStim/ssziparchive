@@ -19,23 +19,37 @@
 @interface SSZipArchive : NSObject
 
 // Unzip
+
 + (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination;
+
 + (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<SSZipArchiveDelegate>)delegate;
 
 + (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error;
+
 + (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<SSZipArchiveDelegate>)delegate;
 
-+ (BOOL)unzipFileAtPath:(NSString *)path
-		  toDestination:(NSString *)destination
-		progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
-	  completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler;
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination uniqueId:(NSString *)uniqueId;
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error uniqueId:(NSString *)uniqueId;
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<SSZipArchiveDelegate>)delegate uniqueId:(NSString *)uniqueId;
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<SSZipArchiveDelegate>)delegate uniqueId:(NSString *)uniqueId;
 
 + (BOOL)unzipFileAtPath:(NSString *)path
-		  toDestination:(NSString *)destination
-			  overwrite:(BOOL)overwrite
-			   password:(NSString *)password
-		progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
-	  completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler;
+          toDestination:(NSString *)destination
+              overwrite:(BOOL)overwrite
+               password:(NSString *)password
+               uniqueId:(NSString *)uniqueId
+        progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
+      completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler;
+
++ (BOOL)unzipFileAtPath:(NSString *)path
+          toDestination:(NSString *)destination
+               uniqueId:(NSString *)uniqueId
+        progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
+      completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler;
+
 
 // Zip
 + (BOOL)createZipFileAtPath:(NSString *)path withFilesAtPaths:(NSArray *)filenames;
@@ -65,6 +79,8 @@
 
 - (void)zipArchiveProgressEvent:(unsigned long long)loaded total:(unsigned long long)total;
 - (void)zipArchiveDidUnzipArchiveFile:(NSString *)zipFile entryPath:(NSString *)entryPath destPath:(NSString *)destPath;
+
+- (void)zipArchiveDidUnzipArchiveAtPath:(NSString *)path zipInfo:(unz_global_info)zipInfo unzippedPath:(NSString *)unzippedPath uniqueId:(NSString *)uniqueId;
 
 @end
 

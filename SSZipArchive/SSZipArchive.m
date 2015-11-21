@@ -40,48 +40,71 @@
 
 #pragma mark - Unzipping
 
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination;
 {
-	return [self unzipFileAtPath:path toDestination:destination delegate:nil];
+    return [self unzipFileAtPath:path toDestination:destination uniqueId:nil];
 }
 
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<SSZipArchiveDelegate>)delegate;
 {
-	return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password error:error delegate:nil progressHandler:nil completionHandler:nil];
+    return [self unzipFileAtPath:path toDestination:destination delegate:delegate uniqueId:nil];
 }
 
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<SSZipArchiveDelegate>)delegate
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error;
 {
-	return [self unzipFileAtPath:path toDestination:destination overwrite:YES password:nil error:nil delegate:delegate progressHandler:nil completionHandler:nil];
+    return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password error:error uniqueId:nil];
 }
 
-+ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<SSZipArchiveDelegate>)delegate
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<SSZipArchiveDelegate>)delegate;
 {
-	return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password error:error delegate:delegate progressHandler:nil completionHandler:nil];
+    return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password error:error delegate:delegate uniqueId:nil];
+}
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination uniqueId:(NSString *)uniqueId;
+{
+    return [self unzipFileAtPath:path toDestination:destination delegate:nil uniqueId:uniqueId];
+}
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error uniqueId:(NSString *)uniqueId;
+{
+    return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password uniqueId:uniqueId error:error delegate:nil progressHandler:nil completionHandler:nil];
+}
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination delegate:(id<SSZipArchiveDelegate>)delegate uniqueId:(NSString *)uniqueId;
+{
+    return [self unzipFileAtPath:path toDestination:destination overwrite:YES password:nil uniqueId:uniqueId error:nil delegate:delegate progressHandler:nil completionHandler:nil];
+}
+
++ (BOOL)unzipFileAtPath:(NSString *)path toDestination:(NSString *)destination overwrite:(BOOL)overwrite password:(NSString *)password error:(NSError **)error delegate:(id<SSZipArchiveDelegate>)delegate uniqueId:(NSString *)uniqueId;
+{
+    return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password uniqueId:uniqueId error:error delegate:delegate progressHandler:nil completionHandler:nil];
 }
 
 + (BOOL)unzipFileAtPath:(NSString *)path
 		  toDestination:(NSString *)destination
 			  overwrite:(BOOL)overwrite
 			   password:(NSString *)password
+               uniqueId:(NSString *)uniqueId
 		progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
-	  completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler
+      completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler;
 {
-	return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password error:nil delegate:nil progressHandler:progressHandler completionHandler:completionHandler];
+    return [self unzipFileAtPath:path toDestination:destination overwrite:overwrite password:password uniqueId:uniqueId error:nil delegate:nil progressHandler:progressHandler completionHandler:completionHandler];
 }
 
 + (BOOL)unzipFileAtPath:(NSString *)path
 		  toDestination:(NSString *)destination
+               uniqueId:(NSString *)uniqueId
 		progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
-	  completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler
+      completionHandler:(void (^)(NSString *path, BOOL succeeded, NSError *error))completionHandler;
 {
-	return [self unzipFileAtPath:path toDestination:destination overwrite:YES password:nil error:nil delegate:nil progressHandler:progressHandler completionHandler:completionHandler];
+    return [self unzipFileAtPath:path toDestination:destination overwrite:YES password:nil uniqueId:uniqueId error:nil delegate:nil progressHandler:progressHandler completionHandler:completionHandler];
 }
 
 + (BOOL)unzipFileAtPath:(NSString *)path
 		  toDestination:(NSString *)destination
 			  overwrite:(BOOL)overwrite
 			   password:(NSString *)password
+               uniqueId:(NSString *)uniqueId
 				  error:(NSError **)error
 			   delegate:(id<SSZipArchiveDelegate>)delegate
 		progressHandler:(void (^)(NSString *entry, unz_file_info zipInfo, long entryNumber, long total))progressHandler
@@ -371,6 +394,9 @@
 	if (success && [delegate respondsToSelector:@selector(zipArchiveDidUnzipArchiveAtPath:zipInfo:unzippedPath:)]) {
 		[delegate zipArchiveDidUnzipArchiveAtPath:path zipInfo:globalInfo unzippedPath:destination];
 	}
+    else if (success && [delegate respondsToSelector:@selector(zipArchiveDidUnzipArchiveAtPath:zipInfo:unzippedPath:uniqueId:)]) {
+        [delegate zipArchiveDidUnzipArchiveAtPath:path zipInfo:globalInfo unzippedPath:destination uniqueId:uniqueId];
+    }
 	// final progress event = 100%
     if (!canceled && [delegate respondsToSelector:@selector(zipArchiveProgressEvent:total:)]) {
 		[delegate zipArchiveProgressEvent:fileSize total:fileSize];
